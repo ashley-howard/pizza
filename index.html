@@ -4,10 +4,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/main.min.css">
     <title>Document</title>
 </head>
 
 <body>
+
+    <div class="container">
+        <span>Is / are </span>
+
+        <div>
+            <span>Quantity</span>
+            <input type="number" name="quantity-1" id="quantity-1" placeholder="quantity">
+        </div>
+
+        <div>
+            <span>Size</span>
+            <input type="number" name="measurement-1" id="measurement-1" placeholder="size">
+        </div>
+
+        <span> inch pizza(s), more than</span>
+
+        <div>
+            <span>Quantity</span>
+            <input type="number" name="quantity-2" id="quantity-2" placeholder="quantity">
+        </div>
+
+        <div>
+            <span>Size</span>
+            <input type="number" name="measurement-2" id="measurement-2" placeholder="size">
+        </div>
+
+        <span>inch pizza(s)?</span>
+
+        <!-- <select id="equality">
+            <option value="more than" selected>more than </option>
+            <option value="less than">less than </option>
+            <option value="equal to">the same as </option>
+        </select> -->
+        <button onclick="pizzaCalc()">Go</button>
+    </div>
+
+    <p id="answer"></p>
 
     <script src="/scripts/script.js"></script>
 </body>
