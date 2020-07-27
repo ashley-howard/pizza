@@ -7,6 +7,7 @@
     <link rel="icon" type="image/svg+xml" href="pizza-icon.svg">
     <link rel="alternate icon" href="pizza-icon.ico">
     <link rel="mask-icon" href="pizza-icon.svg" color="#ff8a01">
+    <meta name="theme-color" content="#d60000">
     <link rel="stylesheet" href="styles/main.min.css">
     <title>Pizza Calculator</title>
 </head>
@@ -19,38 +20,41 @@
         </svg> Pizza Calculator</h1>
 
     <div class="container">
-        <span id="grammar-1">Is</span>
 
-        <div>
-            <span>Quantity</span>
-            <input type="number" min="1" name="quantity-1" id="quantity-1" placeholder="1" onchange="updateGrammar()">
+        <div class="s">
+            <span id="w-1">Is</span>
+
+            <div>
+                <span>Quantity</span>
+                <input type="number" min="1" name="quantity-1" id="quantity-1" placeholder="1"
+                    onchange="updateGrammar()">
+            </div>
+
+            <div>
+                <span>Size</span>
+                <input type="number" min="1" name="measurement-1" id="measurement-1" placeholder="18">
+            </div>
+
+            <span id="w-2"> inch pizza,</span>
         </div>
 
-        <div>
-            <span>Size</span>
-            <input type="number" min="1" name="measurement-1" id="measurement-1" placeholder="18">
+        <div class="s">
+            <span>&nbsp;more than</span>
+
+            <div>
+                <span>Quantity</span>
+                <input type="number" min="1" name="quantity-2" id="quantity-2" placeholder="2"
+                    onchange="updateGrammar()">
+            </div>
+
+            <div>
+                <span>Size</span>
+                <input type="number" min="1" name="measurement-2" id="measurement-2" placeholder="12">
+            </div>
+
+            <span id="w-3">inch pizza?</span>
         </div>
 
-        <span id="grammar-2"> inch pizza,</span>
-        <span>&nbsp;more than</span>
-
-        <div>
-            <span>Quantity</span>
-            <input type="number" min="1" name="quantity-2" id="quantity-2" placeholder="2" onchange="updateGrammar()">
-        </div>
-
-        <div>
-            <span>Size</span>
-            <input type="number" min="1" name="measurement-2" id="measurement-2" placeholder="12">
-        </div>
-
-        <span id="grammar-3">inch pizza?</span>
-
-        <!-- <select id="equality">
-            <option value="more than" selected>more than </option>
-            <option value="less than">less than </option>
-            <option value="equal to">the same as </option>
-        </select> -->
     </div>
 
     <div class="btn-group">
@@ -60,10 +64,11 @@
 
     <p id="answer"></p>
 
-    <h2 id="formula-title">Formula</h2>
+    <div id="formula-container">
+        <h2 id="formula-title">Formula</h2>
 
-    <p id="formula"></p>
-
+        <p id="formula"></p>
+    </div>
 
     <script src="scripts/script.js"></script>
 </body>

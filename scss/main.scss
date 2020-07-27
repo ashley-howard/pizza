@@ -4,21 +4,25 @@ body {
 
 .container {
     display: flex;
-    align-items: flex-end;
-    flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     padding-bottom: 25px;
 
-    &>div {
+    .s {
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 0px 5px;
-        margin-top: 15px;
+        align-items: flex-end;
+        padding: 5px 0;
 
-        span {
-            font-size: 0.75em;
-            color: gray;
+        &>div {
+            padding: 0px 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            &>span {
+                font-size: 0.75em;
+                color: gray;
+            }
         }
     }
 }
@@ -51,10 +55,22 @@ input {
     width: 35px;
 }
 
-#formula-title, #formula {
-    display: none;
-}
-
 svg {
     fill: #bf0000;
+}
+
+#answer {
+    font-size: 2em;
+}
+
+#formula-container {
+    display: none;
+    border-top: 1px solid #cacaca;
+    border-bottom: 1px solid #cacaca;
+}
+
+@media only screen and (max-width: 550px) {
+    .container {
+        flex-direction: column;
+    }
 }
