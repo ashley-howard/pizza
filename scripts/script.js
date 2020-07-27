@@ -26,6 +26,7 @@ function pizzaCalc(q1, m1, q2, m2) {
         }
 
         document.getElementById('formula-title').style.display = 'block'
+        document.getElementById('formula').style.display = 'block'
         formula.innerText = `Area 1 = ${q1}\u03C0(${m1}/2)\xB2 = ${Math.round(pizza1)} in\xB2 \n Area 2 = ${q2}\u03C0(${m2}/2)\xB2 = ${Math.round(pizza2)} in\xB2`
 
     } else {
@@ -33,7 +34,7 @@ function pizzaCalc(q1, m1, q2, m2) {
     }
 }
 
-function updateGrammar(){
+function updateGrammar() {
     q1 = +quantity1.value;
     q2 = +quantity2.value;
     m1 = +measurement1.value;
@@ -42,15 +43,20 @@ function updateGrammar(){
     if (q1 > 1) {
         document.getElementById('grammar-1').innerText = 'Are'
         document.getElementById('grammar-2').innerText = ' inch pizzas,'
-        
+
     } else {
         document.getElementById('grammar-1').innerText = 'Is'
         document.getElementById('grammar-2').innerText = ' inch pizza,'
     }
     if (q2 > 1) {
         document.getElementById('grammar-3').innerText = 'inch pizzas?'
-        
+
     } else {
         document.getElementById('grammar-3').innerText = 'inch pizza?'
     }
+}
+
+function reset() {
+    quantity1.value = quantity2.value = measurement1.value = measurement2.value = answer.innerText = '';
+    document.getElementById('formula-title').style.display = document.getElementById('formula').style.display = 'none'
 }
