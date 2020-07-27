@@ -31,12 +31,26 @@ function pizzaCalc(q1, m1, q2, m2) {
     } else {
         answer.innerText = `Please fill out all inputs`
     }
+}
 
-    // writing formula
-    // \u03C0
+function updateGrammar(){
+    q1 = +quantity1.value;
+    q2 = +quantity2.value;
+    m1 = +measurement1.value;
+    m2 = +measurement2.value;
 
-    // if (q1 > 1){
-
-    // }
-
+    if (q1 > 1) {
+        document.getElementById('grammar-1').innerText = 'Are'
+        document.getElementById('grammar-2').innerText = ' inch pizzas,'
+        
+    } else {
+        document.getElementById('grammar-1').innerText = 'Is'
+        document.getElementById('grammar-2').innerText = ' inch pizza,'
+    }
+    if (q2 > 1) {
+        document.getElementById('grammar-3').innerText = 'inch pizzas?'
+        
+    } else {
+        document.getElementById('grammar-3').innerText = 'inch pizza?'
+    }
 }
